@@ -34,7 +34,7 @@
                     
                     <div>
                         <div class="font-bold text-white">@client.FirstName @client.LastName</div>
-                        <div class="text-sm opacity-50">@client.Address</div>
+                        <div class="text-sm opacity-70">@client.Address</div>
                     </div>
                 </div>
             </td>
@@ -42,7 +42,7 @@
             <td>
                 @client.CivilStatus
             <br />
-                <span class="badge badge-ghost badge-sm text-white">@client.Occupation</span>
+                <span class="badge badge-warning badge-sm text-dark">@client.Occupation</span>
             </td>
 
             <td>@client.ZipCode</td>
@@ -51,7 +51,7 @@
             <td>
                 @client.Birthday.ToString("MMM dd yyyy")
             <br />
-                <span class="badge badge-ghost badge-sm">@client.Age</span>
+                <span class="badge badge-warning badge-sm">@client.Age</span>
             </td>
 
             <td>
