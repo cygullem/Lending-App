@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="bg-slate-600">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] GULLLEM-MVC FINALS</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1450px !important;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar shadow-lg dark:bg-slate-500 text-white">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+            </li>
+
+             <li>
+                <a asp-area="" asp-controller="Client" asp-action="Index">CLIENT</a>
+            </li>
+
+            <li>
+                <a asp-area="" asp-controller="Loan" asp-action="Index">LOAN</a>
+            </li>
+        </nav>
+    </header>
+
+    <div class="container-fluid p-8 bg-slate-600">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

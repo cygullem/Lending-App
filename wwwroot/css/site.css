@@ -1,0 +1,56 @@
+html {
+  background-color: black;
+  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 60px;
+}
+nav li{
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 2px;
+  margin-left: 18px;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all .7s ease-out;
+}
+nav li:hover{
+  color: #facc15;
+}
+
+label{
+  color: #fff;
+}
+.tablecont{
+  max-height: 76vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.darkthis tr th{
+  color: #000;
+  text-transform: uppercase;
+}
+
+.create,
+.tablecont{
+  font-family: 'Rubik', sans-serif;
+}

@@ -1,0 +1,42 @@
+@model IEnumerable<CyMvc.ViewModels.ClientInfoViewModel>
+
+<div class="tablecont mt-12">
+    <table class="table bg-slate-700">
+        <thead class="text-white">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Occupation</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var clientInfo in Model)
+            {                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                <tr class="hover">
+                    <td>@clientInfo.Id</td>
+                    <td>
+                        <div class="flex items-center gap-3">
+                            <div class="avatar">
+                                <div class="rounded-full h-12 w-12 ring-primary-100 ring-offset-base-100 ring ring-offset-2">
+                                    <img src="~/img/placeholder.png"/>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="font-bold text-white">@clientInfo.FirstName @clientInfo.LastName</div>
+                                <div class="text-sm opacity-50">@clientInfo.Address</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-white">@clientInfo.Occupation</td>
+                    <td class="text-white">@clientInfo.Age</td>
+                    <td>
+                        <a class="btn btn-warning btn-sm text-dark" asp-action="Loan" asp-route-id="@clientInfo.Id"><i class="fa-solid fa-piggy-bank"></i>Loan</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

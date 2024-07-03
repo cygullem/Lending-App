@@ -1,0 +1,9 @@
+ @* <div class="navbar-center">
+                <a class="text-xl font-semiboldF text-dark" asp-area="" asp-controller="Home"
+                    asp-action="Index">CyMVC</a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="text-xl font-semiboldF text-dark" asp-area="" asp-controller="Home"
+                    asp-action="Privacy">Privacy</a>
+            </div> *@

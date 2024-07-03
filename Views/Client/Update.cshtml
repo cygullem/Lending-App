@@ -1,0 +1,93 @@
+@model CyMvc.ViewModels.ClientInfoViewModel
+
+
+<div class="flex justify-center items-center mt-12">
+    <div class="card w-1/2 shadow-xl" > 
+        <div class="card-body rounded-lg bg-slate-700">
+            <h2 class="card-title text-white">Update Client !</h2>
+
+                <form asp-action="Update" method="post" class="mt-4 grid grid-cols-4 gap-5">
+
+                        <input type="hidden" asp-for="Id" />
+                            <div class="col-span-1 form-group">
+                                <label asp-for="FirstName" class="control-label text-white text-sm font-medium">First Name</label>
+                                <input asp-for="FirstName" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter First Name" />        
+                            </div>
+
+                            <div class="col-span-1 form-group">
+                                <label asp-for="LastName" class="control-label text-white text-sm font-medium">Last Name</label>
+                                <input asp-for="LastName" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Last Name" />        
+                            </div>
+
+                            <div class="col-span-1 form-group">
+                                <label asp-for="Birthday" class="control-label text-white text-sm font-medium">Birthday</label>
+                                <input asp-for="Birthday" id="birthday" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="date" placeholder="Enter Birthday" />        
+                            </div>
+
+                            <div class="col-span-1 form-group">
+                                <label asp-for="Age" class="control-label text-white text-sm font-medium">Age</label>
+                                <input asp-for="Age" id="age" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="01" readonly />        
+                            </div>
+
+                            <div class="col-span-2 form-group">
+                                <label asp-for="Address" class="control-label text-white text-sm font-medium">Address</label>
+                                <input asp-for="Address" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Address" />        
+                            </div>
+
+                            <div class="col-span-2 form-group">
+                                <label asp-for="ZipCode" class="control-label text-white text-sm font-medium">ZipCode</label>
+                                <input asp-for="ZipCode" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="number" placeholder="Enter ZipCode" />        
+
+                            </div>
+
+                            <div class="col-span-2 form-group">
+                                <label asp-for="NameOfMother" class="control-label text-white text-sm font-medium">Mother's Name</label>
+                                <input asp-for="NameOfMother" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Mother's Name" />        
+                            </div>
+
+                            <div class="col-span-2 form-group">
+                                <label asp-for="NameOfFather" class="control-label text-white text-sm font-medium">Father's Name</label>
+                                <input asp-for="NameOfFather" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Father's Name" />        
+                            </div>
+
+                            <div class="col-span-1 form-group">
+                                <label asp-for="CivilStatus" class="control-label text-white text-sm font-medium">Civil Status</label>
+                                <input asp-for="CivilStatus" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Civil Status" />        
+                            </div>
+
+                            <div class="col-span-1 form-group">
+                                <label asp-for="Religion" class="control-label text-white text-sm font-medium">Religion</label>
+                                <input asp-for="Religion" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Religion" />        
+                            </div>
+
+                            <div class="col-span-2 form-group">
+                                <label asp-for="Occupation" class="control-label text-white text-sm font-medium">Occupation</label>
+                                <input asp-for="Occupation" class="form-control mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" placeholder="Enter Occupation" />        
+                            </div>
+
+                            <div class="col-span-4 form-group">
+                                <div class="float-right">
+                                    <input type="submit" value="Update" class="btn btn-warning text-dark " />
+                                    <a class="btn btn-error text-dark " href="@Url.Action("Index", "Client")">Back</a>
+                                </div>
+                            </div>
+
+                            
+                </form>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,76 @@
+@model IEnumerable<CyMvc.ViewModels.ClientInfoViewModel>
+
+
+<a class="btn btn-m bg-slate-800 text-white my-5 float-right" href="@Url.Action("Create", "Client")"><i class="fa-solid fa-user-plus"></i>ADD</a>
+
+<div class="tablecont">
+  <table class="table bg-slate-700">
+    
+    <thead>
+      <tr class="text-white">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>ZipCode</th>
+        <th>Religion</th>
+        <th>Birthday</th>
+        <th>Parent's Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var client in Model)
+        {   
+        <tr class="hover">
+            <td>@client.Id</td>
+            <td>
+                <div class="flex items-center gap-3">
+                    <div class="avatar">
+                        <div class="rounded-full h-12 w-12 ring-primary-100 ring-offset-base-100 ring ring-offset-2">
+                            <img src="~/img/placeholder.png"/>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="font-bold text-white">@client.FirstName @client.LastName</div>
+                        <div class="text-sm opacity-50">@client.Address</div>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                @client.CivilStatus
+            <br />
+                <span class="badge badge-ghost badge-sm text-white">@client.Occupation</span>
+            </td>
+
+            <td>@client.ZipCode</td>
+            <td>@client.Religion</td>
+
+            <td>
+                @client.Birthday.ToString("MMM dd yyyy")
+            <br />
+                <span class="badge badge-ghost badge-sm">@client.Age</span>
+            </td>
+
+            <td>
+                @client.NameOfMother
+            <br />
+                @client.NameOfFather
+            </td>
+
+            <th>
+                <a class="btn btn-warning btn-sm text-white" href="/Client/Update/@client.Id">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <a class="btn btn-error btn-sm text-white " href="/Client/Delete/@client.Id">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+            </th>
+        </tr>
+        }
+    </tbody>
+  </table>
+</div>
+

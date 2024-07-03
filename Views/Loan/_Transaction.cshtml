@@ -1,0 +1,23 @@
+@model IEnumerable<CyMvc.Entities.Transaction>
+
+<div class="tablecont mt-6 bg-slate-600">
+    <table class="table text-xs">
+        <thead class="darkthis text-white">
+            <tr class="bg-amber-400">
+                <th>Id</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tData in Model)
+            {
+                <tr class="hover">
+                    <td>@tData.Id</td>
+                    <td>@tData.Amount</td>
+                    <td>@tData.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
