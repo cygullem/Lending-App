@@ -84,6 +84,7 @@ C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\CyMvc.pdb
 C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll

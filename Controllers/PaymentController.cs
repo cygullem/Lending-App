@@ -8,9 +8,12 @@ using CyMvc.Models;
 using CyMvc.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace CyMvc.Controllers
 {
+    [Authorize]
     public class PaymentController : Controller
     {
         private readonly CymvcContext _context;

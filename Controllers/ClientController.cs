@@ -8,9 +8,12 @@ using Microsoft.Extensions.Logging;
 using CyMvc.Entities;
 using CyMvc.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace CyMvc.Controllers
 {
+    [Authorize]
     public class ClientController : Controller
     {
         private readonly CymvcContext _context;

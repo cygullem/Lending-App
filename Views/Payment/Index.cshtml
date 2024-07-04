@@ -1,6 +1,6 @@
 @model IEnumerable<CyMvc.ViewModels.PaymentViewModel>
 
-<a class="btn btn-m btn-warning float-left text-dark my-5 float-left" href="@Url.Action("Loan", "Loan")">RETURN</a>
+<a class="btn btn-m btn-warning float-left text-dark my-5 float-left" href="@Url.Action("Loan", "Loan")"><i class="fa-solid fa-backward"></i>RETURN</a>
 
 <div class="tablecont mt-12">
     <table class="table bg-slate-700" id="table">
@@ -30,7 +30,7 @@
                         @if (schedDate.Collectable != 0)
                         {
                         
-                            <button class="btn btn-warning btn-sm" onclick="openModal(@schedDate.LoanId, @schedDate.Collectable, @schedDate.PaymentId)">Pay</button>
+                            <button class="btn btn-warning btn-sm" onclick="openModal(@schedDate.LoanId, @schedDate.Collectable, @schedDate.PaymentId)"><i class="fa-solid fa-sack-dollar"></i>Pay</button>
 
                             <div id="payLoanModal" class="modal">
                                 <div class="modal-box relative border">
@@ -45,14 +45,14 @@
                                             <input type="hidden" name="LoanId" id="LoanId">
                                             <input type="hidden" name="PaymentId" id="PaymentId">
                                             
-                                            <div class="card rounded-md bg-primary text-white">
+                                            <div class="card rounded-md bg-warning text-white">
                                                 <div class="card-body">
                                                     <h5 class="card-title">Payments</h5>
                                                     <p class="card-text" id="totalPayments">0.00</p>
                                                 </div>
                                             </div>
 
-                                            <div class="card rounded-md bg-primary text-white">
+                                            <div class="card rounded-md bg-warning text-white">
                                                 <div class="card-body">
                                                     <h5 class="card-title">Remaining</h5>
                                                     <p class="card-text" id="remainingPayments">0.00</p>

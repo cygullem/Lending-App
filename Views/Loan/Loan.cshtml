@@ -1,145 +1,156 @@
 @model List<CyMvc.Entities.Loan>
 
 <style>
-/* This style is necessary for DaisyUI modals to appear */
-.modal-open {
-    display: flex !important;
-}
+    /* This style is necessary for DaisyUI modals to appear */
+    .modal-open {
+        display: flex !important;
+    }
 </style>
-<a class="btn btn-danger btn-m float-left text-white my-5 float-right" href="@Url.Action("Index", "Loan")">RETURN</a>
-<button class="btn btn-m bg-slate-800 text-white text-white mt-5 mb-5 float-end" onclick="addLoanModal.showModal()">Add Loan</button>
+<a class="btn btn-warning btn-m float-left text-dark border-black my-5 float-right"
+    href="@Url.Action("Index", "Loan")"><i class="fa-solid fa-backward"></i>RETURN</a>
+<button class="btn btn-m bg-slate-800 text-white text-white mt-5 mb-5 float-end" onclick="addLoanModal.showModal()"><i
+        class="fa-solid fa-sack-dollar"></i>Add Loan</button>
 
-    <dialog id="addLoanModal" class="modal">
-        <div class="modal-box w-11/12 max-w-5xl bg-slate-700">
-            <form method="dialog">
-                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-            </form>
+<dialog id="addLoanModal" class="modal">
+    <div class="modal-box w-11/12 max-w-5xl bg-slate-700">
+        <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
 
-            <h3 class="text-lg font-bold">Add Loan</h3>
-                <form action="Loan" method="post" class="grid grid-cols-4 gap-5 mt-8">
-                
-                    <input type="hidden" name="ClientId" value="@ViewData["ClientId"]" />
+        <h3 class="text-lg font-bold">Add Loan</h3>
+        <form action="Loan" method="post" class="grid grid-cols-4 gap-5 mt-8">
 
-                        <div class="col-span-1 form-group">
-                            <label>Date loan created</label>
-                            <input type="date" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" name="DateCreated"
-                                value="@DateTime.Now.ToString("yyyy-MM-dd")" required>
-                        </div>
+            <input type="hidden" name="ClientId" value="@ViewData["ClientId"]" />
 
-                        <div class="col-span-1 form-group">
-                            <label>Loan Type</label>
-                            <select class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" name="Type" required>
-                                <option selected hidden>Loan Type</option>
-                                <option value="Daily">Daily</option>
-                                <option value="Weekly">Weekly</option>
-                                <option value="Weekly">Biweekly</option>
-                                <option value="Monthly">Monthly</option>
-                            </select>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>Date loan created</label>
+                <input type="date" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    name="DateCreated" value="@DateTime.Now.ToString("yyyy-MM-dd")" required>
+            </div>
 
-                        <div class="col-span-1 form-group">
-                            <label>Amount to borrow</label>
-                            <input type="number" id="amount" name="Amount" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0" required>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>Loan Type</label>
+                <select class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" name="Type"
+                    required>
+                    <option selected hidden>Loan Type</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Weekly">Biweekly</option>
+                    <option value="Monthly">Monthly</option>
+                </select>
+            </div>
 
-                        <div class="col-span-1 form-group">
-                            <label>Interest (%)</label>
-                            <input type="number" id="interest" name="Interest" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0" required>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>Amount to borrow</label>
+                <input type="number" id="amount" name="Amount" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="0" required>
+            </div>
 
-                        <div class="col-span-1 form-group">
-                            <label>No of payments</label>
-                            <input type="number" id="term" name="Term" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0" required>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>Interest (%)</label>
+                <input type="number" id="interest" name="Interest" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="0" required>
+            </div>
 
-                        <div class="col-span-1 form-group">
-                            <label>Deduction</label>
-                            <input type="number" id="deduct" name="Deduct" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0" required>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>No of payments</label>
+                <input type="number" id="term" name="Term" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="0" required>
+            </div>
 
-                        <div class="col-span-1 form-group">
-                            <label>Interested amount</label>
-                            <input type="text" id="interestedAmount" name="InterestAmount" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0" readonly required>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>Deduction</label>
+                <input type="number" id="deduct" name="Deduct" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="0" required>
+            </div>
 
-                        <div class="col-span-1 form-group">
-                            <label>Recievable Amount</label>
-                            <input type="text" id="recievable" name="Recievable" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
-                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0" readonly required>
-                        </div>
+            <div class="col-span-1 form-group">
+                <label>Interested amount</label>
+                <input type="text" id="interestedAmount" name="InterestAmount" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="0" readonly required>
+            </div>
 
-                        <div class="modal-actions">
-                            <button type="submit" class="btn btn-warning ">Save</button>
-                        </div> 
-                    </form>
-        </div>
-    </dialog>
+            <div class="col-span-1 form-group">
+                <label>Recievable Amount</label>
+                <input type="text" id="recievable" name="Recievable" class="form-control mt-2 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                            focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    placeholder="0" readonly required>
+            </div>
 
-    <div class="tablecont mt-8">
-        <table class="table rounded-lg bg-slate-700">
-            <thead class="text-white">
-                <tr>
-                    <th>Id</th>
-                    <th>Type</th>
-                    <th>Term</th>
-                    <th>Total Payments</th>
-                    <th>Collected</th>
-                    <th>Collectables</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var loanData in Model)
-                {
-                    <tr class="hover">
-                        <td>@loanData.Id</td>
-                        <td>@loanData.Type</td>
-                        <td>@loanData.Term</td>
-                        <td>@loanData.TotalPayable</td>
-                        <td>@loanData.Collected</td>
-                        <td>$@loanData.Collectable</td>
-                        <td>
-                            <span
-                                class=" @(loanData.Collectable != 0 ? "text-primary" : "text-success")">
-                                @(loanData.Collectable != 0 ? "Pending" : "Fully Paid")
-                            </span>
-                        </td>
+            <div class="modal-actions">
+                <button type="submit" class="btn btn-warning ">Save</button>
+            </div>
+        </form>
+    </div>
+</dialog>
 
-                        <td>
-                            <a class="btn btn-warning" asp-controller="Payment" asp-action="Index"
-                                asp-route-id="@loanData.Id">Pay</a>
+<div class="tablecont mt-8">
+    <table class="table rounded-lg bg-slate-700">
+        <thead class="text-white">
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Term</th>
+                <th>Total Payments</th>
+                <th>Collected</th>
+                <th>Collectables</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var loanData in Model)
+            {
+                <tr class="hover">
+                    <td>@loanData.Id</td>
+                    <td>@loanData.Type</td>
+                    <td>@loanData.Term</td>
+                    <td>@loanData.TotalPayable</td>
+                    <td>@loanData.Collected</td>
+                    <td>$@loanData.Collectable</td>
+                    <td>
+                        <span class=" @(loanData.Collectable != 0 ? "text-primary" : "text-success")">
+                            @(loanData.Collectable != 0 ? "Pending" : "Fully Paid")
+                        </span>
+                    </td>
 
-                            @if (loanData.Collected != 0)
-                            {                                                                                                                                                                                                                                                                                                                                                                                                    
-                                @* <!-- Button to open the modal --> *@
-                                <a class="btn btn-primary text-white" onclick="ViewTransaction(@loanData.Id)"><i class="fa-solid fa-receipt"></i></a>
+                    <td>
+                        <a class="btn btn-warning" asp-controller="Payment" asp-action="Index"
+                            asp-route-id="@loanData.Id"><i class="fa-solid fa-circle-dollar-to-slot"></i>Pay</a>
 
-                                @* <!-- Modal structure --> *@
-                                <div id="transactionModal" class="modal hidden fixed inset-0 flex items-center justify-center bg-black z-50">
-                                    <div class="modal-box relative border text-white">
-                                         <form method="dialog">
-                                            <button type="button" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onclick="closeModal()">✕</button>
-                                        </form>
-                                        <div class="modal-body text-white" id="receiptbody">
-                                            <div id="modalList"></div>
-                                        </div>
+                        @if (loanData.Collected != 0)
+                        {
+                            @* <!-- Button to open the modal --> *@
+                            <a class="btn btn-primary text-white" onclick="ViewTransaction(@loanData.Id)"><i
+                                    class="fa-solid fa-receipt"></i></a>
+
+                            @* <!-- Modal structure --> *@
+                            <div id="transactionModal"
+                                class="modal hidden fixed inset-0 flex items-center justify-center bg-black z-50">
+                                <div class="modal-box relative border text-white">
+                                    <form method="dialog">
+                                        <button type="button" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                                            onclick="closeModal()">✕</button>
+                                    </form>
+                                    <div class="modal-body text-white" id="receiptbody">
+                                        <div id="modalList"></div>
                                     </div>
                                 </div>
-                            }
-                        </td>
-                    </tr>
-                }
-            </tbody>    
-        </table>
-    </div>
+                            </div>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 
 

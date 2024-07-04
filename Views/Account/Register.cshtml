@@ -1,0 +1,29 @@
+@model CyMvc.ViewModels.RegisterViewModel
+
+<div class="rounded-lg bg-slate-700 p-8 flex flex-col items-center">
+    <h2 class="text-3xl font-semibold text-white mb-6">HELLO USER</h2>
+
+    <form asp-action="Register" method="post" class="w-full max-w-sm">
+        <div asp-validation-summary="ModelOnly" class="text-red-500 mb-4"></div>
+
+        <div class="mb-4">
+            <label asp-for="Email" class="block text-white mb-2"></label>
+            <input asp-for="Email" class="form-control bg-gray-800 text-white border border-gray-600 rounded py-2 px-4 w-full" />
+            <span asp-validation-for="Email" class="text-red-500 text-sm"></span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="Password" class="block text-white mb-2"></label>
+            <input asp-for="Password" class="form-control bg-gray-800 text-white border border-gray-600 rounded py-2 px-4 w-full" />
+            <span asp-validation-for="Password" class="text-red-500 text-sm"></span>
+        </div>
+
+        <div class="mb-6">
+            <label asp-for="ConfirmPassword" class="block text-white mb-2"></label>
+            <input asp-for="ConfirmPassword" class="form-control bg-gray-800 text-white border border-gray-600 rounded py-2 px-4 w-full" />
+            <span asp-validation-for="ConfirmPassword" class="text-red-500 text-sm"></span>
+        </div>
+
+        <button type="submit" class="bg-yellow-500 text-black font-bold py-2 px-4 rounded w-full"><i class="fa-regular fa-address-card"></i>&#160;&#160;REGISTER</button>
+    </form>
+</div>

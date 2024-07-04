@@ -8,9 +8,12 @@ using Microsoft.Extensions.Logging;
 using CyMvc.Entities;
 using CyMvc.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
-namespace IvanLoan.Controllers
+
+namespace CyMvc.Controllers
 {
+    [Authorize]
     public class LoanController : Controller
     {
         private readonly CymvcContext _context;
