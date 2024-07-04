@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Us04CdtgRqvLNqIKgpgbpdxIoBOHlGI77RFA1x/b8A4=",
+  "Hash": "v2zxuJyBQ7hheLuzOIMY9ymvCjSfrVW6bNgRax52sKY=",
   "Source": "CyMvc",
   "BasePath": "_content/CyMvc",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\wwwroot\\img\\Lending-Platform.png",
+      "SourceId": "CyMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\wwwroot\\",
+      "BasePath": "_content/CyMvc",
+      "RelativePath": "img/Lending-Platform.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Lending-Platform.png"
     },
     {
       "Identity": "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\wwwroot\\img\\placeholder.png",

@@ -1,6 +1,13 @@
 @model IEnumerable<CyMvc.ViewModels.PaymentViewModel>
 
-<a class="btn btn-m btn-warning float-left text-dark my-5 float-left" href="@Url.Action("Loan", "Loan")"><i class="fa-solid fa-backward"></i>RETURN</a>
+@{
+    var clientId = Model.FirstOrDefault()?.ClientId;
+}
+
+<a class="btn btn-m btn-warning float-left text-dark my-5" href="@Url.Action("Loan", "Loan", new { id = clientId })">
+    <i class="fa-solid fa-backward"></i>
+    RETURN
+</a>
 
 <div class="tablecont mt-12">
     <table class="table bg-slate-700" id="table">
@@ -11,40 +18,43 @@
                 <th>Schedule</th>
                 <th>Status</th>
                 <th>Action</th>
-            </tr>   
+            </tr>
         </thead>
         <tbody>
             @foreach (var schedDate in Model)
-            {                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            {
                 <tr class="hover">
                     <td>@schedDate.PaymentId</td>
                     <td>@schedDate.Collectable.ToString("F0")</td>
-                    <td>@schedDate.Date.ToString("MMM dd yyyy")     </td>
+                    <td>@schedDate.Date.ToString("MMM dd yyyy") </td>
                     <td>
                         <span
                             class="@(schedDate.Collectable != 0 ? (schedDate.Collectable == schedDate.CollectableOrig ? "text-primary" : "text-warning") : "text-success")">
-                            @(schedDate.Collectable != 0 ? (schedDate.Collectable == schedDate.CollectableOrig ? "Unpaid" : "Partial") : "Paid")
+                            @(schedDate.Collectable != 0 ? (schedDate.Collectable == schedDate.CollectableOrig ? "Unpaid" :
+                                "Partial") : "Paid")
                         </span>
                     </td>
                     <td>
                         @if (schedDate.Collectable != 0)
                         {
-                        
-                            <button class="btn btn-warning btn-sm" onclick="openModal(@schedDate.LoanId, @schedDate.Collectable, @schedDate.PaymentId)"><i class="fa-solid fa-sack-dollar"></i>Pay</button>
+                            <button class="btn btn-warning btn-sm"
+                                onclick="openModal(@schedDate.LoanId, @schedDate.Collectable, @schedDate.PaymentId)"><i
+                                    class="fa-solid fa-sack-dollar"></i>Pay</button>
 
                             <div id="payLoanModal" class="modal">
                                 <div class="modal-box relative border">
                                     <form method="dialog">
-                                        <button type="button" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onclick="closeModal()">✕</button>
+                                        <button type="button" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                                            onclick="closeModal()">✕</button>
                                     </form>
-                                    
+
                                     <h3 class="text-white text-lg font-bold">Pay Loan</h3>
-                                    
+
                                     <form action="Payment" method="post">
                                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
                                             <input type="hidden" name="LoanId" id="LoanId">
                                             <input type="hidden" name="PaymentId" id="PaymentId">
-                                            
+
                                             <div class="card rounded-md bg-warning text-white">
                                                 <div class="card-body">
                                                     <h5 class="card-title">Payments</h5>
@@ -62,7 +72,8 @@
                                             <div class="form-control col-span-1 md:col-span-2">
                                                 <label class="label">Amount to Pay</label>
                                                 <input type="hidden" id="currentAmmount" name="Total">
-                                                <input type="number" id="amount" name="Amount" class="form-control w-full h-12 border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
+                                                <input type="number" id="amount" name="Amount"
+                                                    class="form-control w-full h-12 border border-gray-300 px-3 py-2 rounded-lg shadow-sm 
                                                 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="0">
                                             </div>
                                         </div>

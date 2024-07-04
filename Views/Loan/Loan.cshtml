@@ -6,10 +6,19 @@
         display: flex !important;
     }
 </style>
-<a class="btn btn-warning btn-m float-left text-dark border-black my-5 float-right"
-    href="@Url.Action("Index", "Loan")"><i class="fa-solid fa-backward"></i>RETURN</a>
-<button class="btn btn-m bg-slate-800 text-white text-white mt-5 mb-5 float-end" onclick="addLoanModal.showModal()"><i
-        class="fa-solid fa-sack-dollar"></i>Add Loan</button>
+
+@* <a class="btn btn-warning btn-m float-left text-dark border-black my-5 float-right" href="@Url.Action("Index", "Loan")">
+    <i class="fa-solid fa-backward"></i>
+    BACK
+</a> *@
+<a class="btn btn-warning btn-m float-left text-black my-5 float-right" href="@Url.Action("Index", "Client")">
+    <i class="fa-solid fa-backward"></i>
+    RETURN
+</a>
+<button class="btn btn-m bg-slate-800 text-white text-white mt-5 mb-5 float-end" onclick="addLoanModal.showModal()">
+    <i class="fa-solid fa-sack-dollar"></i>
+    Add Loan
+</button>
 
 <dialog id="addLoanModal" class="modal">
     <div class="modal-box w-11/12 max-w-5xl bg-slate-700">
