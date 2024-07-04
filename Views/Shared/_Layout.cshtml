@@ -25,41 +25,52 @@
 
 <body>
     <header>
-        <nav class="navbar shadow-lg bg-slate-500 text-white">
+        <nav class="navbar shadow-lg bg-slate-500 text-white flex justify-between">
             @if (User.Identity.IsAuthenticated)
             {
-                <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Index"><i
-                            class="fa-brands fa-fort-awesome">&#160;</i>HOME</a>
-                </li>
+                <ul class="flex">
+                    <li class="mr-4">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="flex items-center">
+                            <i class="fa-brands fa-fort-awesome mr-1"></i>HOME
+                        </a>
+                    </li>
 
-                <li>
-                    <a asp-area="" asp-controller="Client" asp-action="Index"><i
-                            class="fa-solid fa-user-tie">&#160;</i>CLIENT</a>
-                </li>
+                    <li class="mr-4">
+                        <a asp-area="" asp-controller="Client" asp-action="Index" class="flex items-center">
+                            <i class="fa-solid fa-user-tie mr-1"></i>CLIENT
+                        </a>
+                    </li>
 
-                <li>
-                    <a asp-area="" asp-controller="Loan" asp-action="Index"><i
-                            class="fa-solid fa-basket-shopping">&#160;</i>LOAN</a>
-                </li>
-                <li class="nav-item">
-                    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm"
-                        class="form-inline">
-                        <button type="submit" class="nav-link btn btn-link text-dark"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
-                    </form>
-                </li>
+                    <li class="mr-4">
+                        <a asp-area="" asp-controller="Loan" asp-action="Index" class="flex items-center">
+                            <i class="fa-solid fa-basket-shopping mr-1"></i>LOAN
+                        </a>
+                    </li>
+                </ul>
+
+                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm"
+                    class="form-inline">
+                    <button type="submit" class="btn text-white flex items-center">
+                        <i class="fa-solid fa-right-from-bracket ml-1"></i>
+                        Sign Out
+                    </button>
+                </form>
             }
             else
             {
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                </li>
+                <ul class="flex">
+                    <li class="mr-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                    </li>
+                    <li class="mr-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                            asp-action="Register">Register</a>
+                    </li>
+                </ul>
             }
         </nav>
     </header>
+
 
     <div class="container-fluid p-8 bg-slate-600">
         <main role="main" class="pb-3">
