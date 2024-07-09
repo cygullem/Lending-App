@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj": {}
+    "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
         "projectName": "CyMvc",
-        "projectPath": "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Huawei\\AppData\\Roaming\\NuGet\\NuGet.Config"
