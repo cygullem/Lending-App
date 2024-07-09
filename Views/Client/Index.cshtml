@@ -10,7 +10,7 @@
       <tr class="text-white">
         <th>Id</th>
         <th>Name</th>
-        <th>Job</th>
+        <th>Status</th>
         <th>ZipCode</th>
         <th>Religion</th>
         <th>Birthday</th>
@@ -61,15 +61,24 @@
             </td>
 
             <th>
-                <a class="btn btn-success btn-sm text-white" href="/Loan/Loan/@client.Id">
-                    <i class="fa-solid fa-eye"></i>
-                </a>
-                <a class="btn btn-warning btn-sm text-white" href="/Client/Update/@client.Id">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                </a>
-                <a class="btn btn-error btn-sm text-white " href="/Client/Delete/@client.Id">
-                    <i class="fa-solid fa-trash"></i>
-                </a>
+                <div class="tooltip">
+                    <a class="btn btn-success btn-sm text-white" href="/Loan/Loan/@client.Id">
+                        <i class="fa-solid fa-eye"></i>
+                    </a>
+                    <span class="tooltiptext">View Loan</span>
+                </div>
+                <div class="tooltip">
+                    <a class="btn btn-warning btn-sm text-white" href="/Client/Update/@client.Id">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <span class="tooltiptext">Update Info</span>
+                </div>
+                <div class="tooltip">
+                    <a class="btn btn-error btn-sm text-white" href="/Client/Delete/@client.Id">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                    <span class="tooltiptext">Delete Data</span>
+                </div>
             </th>
         </tr>
         }
