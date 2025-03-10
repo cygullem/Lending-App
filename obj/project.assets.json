@@ -3641,11 +3641,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
+      "projectUniqueName": "D:\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
       "projectName": "CyMvc",
-      "projectPath": "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
+      "projectPath": "D:\\CyGullz\\CODES\\CyMvc\\CyMvc.csproj",
       "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Huawei\\Desktop\\CyGullz\\CODES\\CyMvc\\obj\\",
+      "outputPath": "D:\\CyGullz\\CODES\\CyMvc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Huawei\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3710,7 +3710,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.118\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.113\\RuntimeIdentifierGraph.json"
       }
     }
   }

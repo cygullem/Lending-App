@@ -9,73 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CyMvc
 build_property.RootNamespace = CyMvc
-build_property.ProjectDir = C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc\
+build_property.ProjectDir = d:\CyGullz\CODES\CyMvc\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Huawei\Desktop\CyGullz\CODES\CyMvc
+build_property.MSBuildProjectDirectory = d:\CyGullz\CODES\CyMvc
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Account/Login.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Account/Register.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Client/Create.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Client/Index.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Client/Update.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Client/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Home/Index.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Home/Privacy.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Loan/Index.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Loan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Loan/Loan.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Loan/Loan.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblxMb2FuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Loan/_Transaction.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Loan/_Transaction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblxfVHJhbnNhY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Payment/Index.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Payment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Shared/Error.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/_ViewImports.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/_ViewStart.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Huawei/Desktop/CyGullz/CODES/CyMvc/Views/Shared/_Layout.cshtml]
+[d:/CyGullz/CODES/CyMvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9zfzzrz0ql
