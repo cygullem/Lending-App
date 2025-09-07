@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bbc0c740a3a393e4c337b3177d30135c66cf6da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fa0e8c5ca666ab88d0ce55a908e35664c345a72")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
